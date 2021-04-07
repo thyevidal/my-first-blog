@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Thye</title>
+</head>
+<body>
+    <h1>BEM VINDO AO BLOG DO THYE</h1>
+    <h2>Aqui é onde conto um pouco sobre minha vida</h2>
+    <p><a href="http://127.0.0.1:8000/">voltar</a></p>
+
+    {% for post in posts %}
+    <section>
+        <div class="post">
+            <h1 class="titulo-post"><a href="#">{{ post.title }}</a></h1>
+            <p class="preview">{{ post.text|linebreaks }}</p>
+            <p class="dados do post">Publicado em: {{ post.published_date }}</p>
+        </div>
+    {% endfor %}
+
+    </section>
+</body>
+</html>
